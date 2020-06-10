@@ -60,9 +60,10 @@ int main(){
         //根据缓存的结束项目更新受限项目的状态
         for(auto temp_p : temp){
             for(auto free_p : bind[temp_p]){
-                --proj[free_p][i];
+                --proj[free_p][1];
             }
         }
+        temp.clear();
         ++run_time;
     }
     cout << run_time << endl;
